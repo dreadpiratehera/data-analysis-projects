@@ -12,12 +12,12 @@ print(make_line(5))
 # Part 1 B -- Make a Square
 # create a function using your make_line function to code a square
 
-"""def make_square(size):
+def make_square(size):
     square = ""
     for i in range(size):
         square += (make_line(size) + "\n")
     return square
-print (make_square(5))"""
+print (make_square(5))
 
     # Part 1 C -- Make a Rectangle
 
