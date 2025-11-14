@@ -4,7 +4,8 @@
 # b) Within the function, use the 'list' function to split a string into a list of individual characters
 # c) 'reverse' your new list.
 # d) Use 'join' to create the reversed string and return that string from the function.
-# e) Create a variable of type string to test your new function. # f) Use 'print(reverse_characters(my_variable_name))'; to call the function and verify that it correctly reverses the characters in the string.
+# e) Create a variable of type string to test your new function. 
+# # f) Use 'print(reverse_characters(my_variable_name))'; to call the function and verify that it correctly reverses the characters in the string.
 # g) Use method chaining to reduce the lines of code within the function.
 
 
@@ -27,3 +28,26 @@
 list_test1 = ['apple', 'potato', 'Capitalized Words']
 list_test2 = [123, 8897, 42, 1168, 8675309]
 list_test3 = ['hello', 'world', 123, 'orange']
+
+def reverse_characters(string_to_reverse):
+    if type(string_to_reverse) == str:
+        list(string_to_reverse)
+        return "".join(reversed(list(string_to_reverse)))
+    if type(string_to_reverse) == int:
+        converted_int = str(string_to_reverse)
+        list(converted_int)
+        return int("".join(reversed(list(converted_int))))
+    
+def change_list(list_to_change):
+    new_list = []
+    for i in range(len(list_to_change)):
+        temp_list = reverse_characters(list_to_change[i])
+        i += 1
+        new_list.insert(i, temp_list)
+    return new_list
+    
+print(reverse_characters("stardust")) #1E
+
+print(reverse_characters(list_test2[2])) #2E, works with strings and ints
+
+print(change_list(list_test1)) #3F
